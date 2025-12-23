@@ -1,65 +1,62 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Schedule</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
+    <div class="d-flex">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h1>TLU</h1>
+          <h6>TLU Student</h6>
+        </div>
 
-<div class="d-flex">
-  <!-- SIDEBAR -->
-   <div class="d-flex">
-  <aside class="sidebar">
-    <div class="sidebar-header">
-      <h1>TLU</h1>
-      <h6>TLU Student</h6>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">📅 Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="scores.html">📊 Scores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="information.html">⚙ Information</a>
+          </li>
+          <li class="nav-item mt-auto">
+            <a class="nav-link text-danger" href="index.html">🚪 Logout</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- (copy sidebar ở trên) -->
+      <main class="content">
+        <h3>ℹ Student Information</h3>
+        <p class="text-muted">Your profile</p>
+
+        <div class="card p-4 mt-4 info-card">
+          <p><b>Student ID:</b> <span id="infoId"></span></p>
+          <p><b>Name:</b> <span id="infoName"></span></p>
+          <p><b>Class:</b> <span id="infoClass"></span></p>
+        </div>
+      </main>
     </div>
 
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link" href="dashboard.html">📅 Schedule</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="scores.html">📊 Scores</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="information.html">⚙  Information</a>
-      </li>
-      <li class="nav-item mt-auto">
-        <a class="nav-link text-danger" href="index.html">🚪 Logout</a>
-      </li>
-    </ul>
-  </aside>
-
-  <!-- (copy sidebar ở trên) -->
-    <main class="content">
-    <h3>ℹ Student Information</h3>
-    <p class="text-muted">Your profile</p>
-
-    <div class="card p-4 mt-4 info-card">
-        <p><b>Student ID:</b> <span id="infoId"></span></p>
-        <p><b>Name:</b> <span id="infoName"></span></p>
-        <p><b>Class:</b> <span id="infoClass"></span></p>
+    <!-- Chatbot -->
+    <button class="chatbot-button" onclick="toggleChat()">💬</button>
+    <div class="chat-popup" id="chatPopup">
+      <div class="chat-header">🤖 AI Assistant</div>
+      <div class="chat-body" id="chatBox"></div>
+      <div class="chat-footer">
+        <input id="chatInput" class="form-control mb-2" placeholder="Nhập câu hỏi..." />
+        <button class="btn btn-success w-100" onclick="sendMessage()">Gửi</button>
+      </div>
     </div>
-    </main>
 
-</div>
-
-<!-- Chatbot -->
-<button class="chatbot-button" onclick="toggleChat()">💬</button>
-<div class="chat-popup" id="chatPopup">
-  <div class="chat-header">🤖 AI Assistant</div>
-  <div class="chat-body" id="chatBox"></div>
-  <div class="chat-footer">
-    <input id="chatInput" class="form-control mb-2" placeholder="Nhập câu hỏi...">
-    <button class="btn btn-success w-100" onclick="sendMessage()">Gửi</button>
-  </div>
-</div>
-
-<script src="js/app.js"></script>
-</body>
+    <script src="js/app.js"></script>
+  </body>
 </html>

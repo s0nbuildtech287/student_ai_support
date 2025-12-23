@@ -1,4 +1,4 @@
-const API_BASE = "https://n8n-your-domain/webhook";
+const API_BASE = "http://localhost:5678/webhook-test";
 
 const studentId = localStorage.getItem("studentId");
 if (!studentId && !document.getElementById("studentId")) {
@@ -17,12 +17,13 @@ if (document.getElementById("scheduleTable")) {
   fetch(`${API_BASE}/get-schedule`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ studentId })
+    body: JSON.stringify({ studentId }), //studentId
   })
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Schedule data:", data);
       let html = "";
-      data.forEach(item => {
+      data.forEach((item) => {
         html += `
           <tr>
             <td>${item.day}</td>
@@ -41,12 +42,12 @@ if (document.getElementById("scoreTable")) {
   fetch(`${API_BASE}/get-score`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ studentId })
+    body: JSON.stringify({ studentId }),
   })
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       let html = "";
-      data.forEach(item => {
+      data.forEach((item) => {
         html += `
           <tr>
             <td>${item.subject}</td>
@@ -60,13 +61,35 @@ if (document.getElementById("scoreTable")) {
     });
 }
 
+// Load thông tin cá nhân sinh viên
+if (document.getElementById("infoId")) {
+  fetch(`${API_BASE}/get-info`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ studentId }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      // ✅ data là mảng
+      if (Array.isArray(data) && data.length > 0) {
+        const info = data[0];
+
+        document.getElementById("infoId").innerText = info.student_id || "N/A";
+        document.getElementById("infoName").innerText = info.name || "N/A";
+        document.getElementById("infoClass").innerText = info.class || "N/A";
+      }
+    })
+    .catch((err) => {
+      console.error("Lỗi khi lấy thông tin sinh viên:", err);
+    });
+}
+
 // Toggle chatbot popup
 function toggleChat() {
   const popup = document.getElementById("chatPopup");
   if (!popup) return;
 
-  popup.style.display =
-    popup.style.display === "flex" ? "none" : "flex";
+  popup.style.display = popup.style.display === "flex" ? "none" : "flex";
 }
 
 // Chatbot
@@ -83,11 +106,13 @@ function sendMessage() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       studentId,
-      message: msg
-    })
+      message: msg,
+      // studentId: "2251162100",
+      // message: "Hello n8n",
+    }),
   })
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       chatBox.innerHTML += `<div><b>AI:</b> ${data.answer}</div>`;
       chatBox.scrollTop = chatBox.scrollHeight;
     });

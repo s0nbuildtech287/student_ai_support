@@ -1,0 +1,109 @@
+KIẾN THỨC CHUNG DÀNH CHO SINH VIÊN ĐẠI HỌC
+
+────────────────────────────────
+1. HỆ THỐNG ĐIỂM & ĐÁNH GIÁ
+────────────────────────────────
+
+- Điểm học phần thường gồm:
+  + Điểm giữa kỳ
+  + Điểm cuối kỳ
+  + Một số môn có thêm điểm chuyên cần hoặc bài tập
+
+- Điểm tổng kết thường được tính theo công thức:
+  Điểm tổng = (giữa kỳ * hệ số) + (cuối kỳ * hệ số)
+
+- Thang điểm phổ biến là thang 10.
+- Điểm từ 4.0 trở lên được xem là đạt môn.
+- Điểm từ 8.0 trở lên được xem là giỏi.
+- Điểm 10 là điểm tuyệt đối.
+
+- GPA (Điểm trung bình tích lũy):
+  + GPA < 2.0: có thể bị cảnh báo học vụ
+  + GPA ≥ 2.0: đạt yêu cầu học tập
+  + GPA ≥ 3.2: học lực giỏi
+
+────────────────────────────────
+2. HỌC PHẦN & MÔN HỌC
+────────────────────────────────
+
+- ATTT101: Nhập môn An toàn thông tin  
+  Nội dung: bảo mật, an toàn dữ liệu, tấn công mạng cơ bản
+
+- ATTT102: Mạng máy tính  
+  Nội dung: mô hình OSI, TCP/IP, giao thức mạng
+
+- ATTT103: Mã hóa và bảo mật dữ liệu  
+  Nội dung: thuật toán mã hóa, chữ ký số, xác thực
+
+- Mỗi học phần có số tín chỉ riêng.
+- Sinh viên cần hoàn thành đủ tín chỉ theo chương trình đào tạo để tốt nghiệp.
+
+────────────────────────────────
+3. LỊCH HỌC & LỊCH THI
+────────────────────────────────
+
+- Lịch học thể hiện:
+  + Thứ trong tuần
+  + Môn học
+  + Phòng học
+  + Thời gian học
+
+- Sinh viên nên:
+  + Kiểm tra lịch học thường xuyên
+  + Đến lớp đúng giờ
+  + Chuẩn bị bài trước khi lên lớp
+
+- Lịch thi thường được công bố trước kỳ thi ít nhất 1–2 tuần.
+
+────────────────────────────────
+4. QUY CHẾ & HỌC VỤ
+────────────────────────────────
+
+- Sinh viên có thể học lại môn nếu không đạt.
+- Một số trường giới hạn số lần học lại (thường là 2 lần).
+- Nếu điểm trung bình tích lũy thấp trong nhiều học kỳ liên tiếp:
+  + Có thể bị cảnh báo học vụ
+  + Hoặc tạm dừng học tập
+
+- Sinh viên nên liên hệ cố vấn học tập khi gặp khó khăn học tập.
+
+────────────────────────────────
+5. KỸ NĂNG & LỜI KHUYÊN HỌC TẬP
+────────────────────────────────
+
+- Nên học đều, không học dồn trước kỳ thi.
+- Kết hợp:
+  + Học lý thuyết
+  + Làm bài tập
+  + Thực hành
+- Chủ động hỏi giảng viên hoặc trợ giảng khi chưa hiểu bài.
+- Sử dụng công cụ hỗ trợ học tập như:
+  + Tài liệu online
+  + Video bài giảng
+  + Nhóm học tập
+
+────────────────────────────────
+6. GIAO TIẾP & ĐỜI SỐNG SINH VIÊN
+────────────────────────────────
+
+- Giữ thái độ lịch sự khi trao đổi với giảng viên và bạn học.
+- Cân bằng giữa học tập và nghỉ ngơi.
+- Tham gia các hoạt động ngoại khóa để phát triển kỹ năng mềm.
+
+────────────────────────────────
+7. LƯU Ý CHO TRỢ LÝ AI
+────────────────────────────────
+
+- Nếu câu hỏi liên quan đến:
+  + Điểm số cá nhân
+  + Lịch học cá nhân
+  + Thông tin sinh viên
+→ Phải sử dụng dữ liệu được cung cấp từ hệ thống, không tự suy đoán.
+
+- Nếu câu hỏi mang tính chung chung:
+  + Cách học
+  + Giải thích môn học
+  + Quy chế đào tạo
+→ Có thể trả lời dựa trên kiến thức chung trong tài liệu này.
+
+- Luôn trả lời bằng tiếng Việt, lịch sự, rõ ràng, thân thiện với sinh viên.
