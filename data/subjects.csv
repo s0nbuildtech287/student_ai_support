@@ -1,0 +1,14 @@
+subject_id,subject_name,credits,major
+HTTT101,Cơ sở dữ liệu,3,HTTT
+HTTT102,Hệ thống thông tin quản lý,3,HTTT
+HTTT103,Phân tích & thiết kế HTTT,3,HTTT
+HTTT104,Hệ hỗ trợ quyết định,3,HTTT
+CNPM101,Lập trình Web,3,CNPM
+CNPM102,Công nghệ phần mềm,3,CNPM
+CNPM103,Kiểm thử phần mềm,3,CNPM
+TTNT101,Nhập môn Trí tuệ nhân tạo,3,TTNT
+TTNT102,Học máy,3,TTNT
+TTNT103,Khai phá dữ liệu,3,TTNT
+ATTT101,An toàn mạng,3,ATTT
+ATTT102,Mật mã học,3,ATTT
+ATTT103,Bảo mật hệ thống,3,ATTT
