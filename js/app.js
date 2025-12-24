@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5678/webhook-test";
+const API_BASE = "http://localhost:5678/webhook";
 
 const studentId = localStorage.getItem("studentId");
 if (!studentId && !document.getElementById("studentId")) {
@@ -104,13 +104,19 @@ function sendMessage() {
   fetch(`${API_BASE}/chatbot`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      studentId,
-      message: msg,
-      // studentId: "2251162100",
-      // message: "Hello n8n",
-    }),
+    body: JSON.stringify({ studentId, message: msg }),
   })
+    .then(async (res) => {
+      const text = await res.text();
+      console.log("Raw response:", text);
+      return JSON.parse(text);
+    })
+    .then((data) => {
+      chatBox.innerHTML += `<div><b>AI:</b> ${data.answer}</div>`;
+    })
+    .catch(err => {
+      console.error("Chatbot error:", err);
+    })
     .then((res) => res.json())
     .then((data) => {
       chatBox.innerHTML += `<div><b>AI:</b> ${data.answer}</div>`;
