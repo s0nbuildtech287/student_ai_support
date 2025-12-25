@@ -114,7 +114,7 @@ function sendMessage() {
     .then((data) => {
       chatBox.innerHTML += `<div><b>AI:</b> ${data.answer}</div>`;
     })
-    .catch(err => {
+    .catch((err) => {
       console.error("Chatbot error:", err);
     })
     .then((res) => res.json())
@@ -124,4 +124,31 @@ function sendMessage() {
     });
 
   document.getElementById("chatInput").value = "";
+}
+
+//xuất file
+// Xuất thời khóa biểu
+function exportSchedule() {
+  fetch(`${API_BASE}-test/export-schedule`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ studentId }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      alert("📧 Đã gửi thời khóa biểu về email!");
+    });
+}
+
+// Xuất bảng điểm
+function exportScores() {
+  fetch(`${API_BASE}-test/export-scores`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ studentId }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      alert("📧 Đã gửi bảng điểm về email!");
+    });
 }
